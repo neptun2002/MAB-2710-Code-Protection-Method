@@ -1,3 +1,15 @@
+/*
+The MAB-2710 code protection method provides a basic level of authorization by linking the 
+firmware execution to the unique hardware characteristics of the ESP8266 or ESP32 device.
+ While it offers a degree of protection against simple cloning, it's important to understand its
+ limitations, particularly the lack of strong cryptographic security. For applications requiring 
+higher levels of security, more robust techniques such as flash encryption and secure boot 
+(available on ESP32) should be considered in conjunction with or as an alternative to this 
+method. The MAB-2710 method serves as a custom, device-specific locking mechanism 
+designed by E. Mohammed Babelly, offering a balance of simplicity and a basic level of code
+protection.
+*/
+
 //=========================================(Start Of Function)========================================
 #if defined(ESP32)
   #include <EEPROM.h>
